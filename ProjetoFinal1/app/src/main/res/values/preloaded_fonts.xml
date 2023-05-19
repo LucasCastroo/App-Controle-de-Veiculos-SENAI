@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/anonymous_pro_bold</item>
+        <item>@font/archivo_narrow</item>
+        <item>@font/bebas_neue</item>
+        <item>@font/black_ops_one</item>
+        <item>@font/bungee_shade</item>
+        <item>@font/dm_mono_light</item>
+        <item>@font/fugaz_one</item>
+    </array>
+</resources>

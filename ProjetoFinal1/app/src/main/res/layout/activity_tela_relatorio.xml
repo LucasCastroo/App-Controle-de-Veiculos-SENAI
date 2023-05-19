@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaRelatorio1">
+
+
+    <TextView
+        android:id="@+id/historico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/historico"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <View
+        android:id="@+id/conteinerHistorico"
+        style="@style/conteiner_veiculos"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_infoHistorico" />
+
+    <TextView
+        android:id="@+id/tv_relatorio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/relatorio"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/conteinerHistorico"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/conteinerHistorico"
+        app:layout_constraintTop_toTopOf="@+id/conteinerHistorico"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <TextView
+        android:id="@+id/tv_carro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/carroSelecionado"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/conteinerHistorico"
+        app:layout_constraintTop_toBottomOf="@+id/tv_relatorio" />
+
+    <TextView
+        android:id="@+id/tv_resultCarroH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_carro"
+        app:layout_constraintStart_toEndOf="@+id/tv_carro"
+        app:layout_constraintTop_toTopOf="@+id/tv_carro" />
+
+    <TextView
+        android:id="@+id/tv_infoHistorico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/info_historico"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/historico"
+        app:layout_constraintStart_toStartOf="@+id/historico"
+        tools:layout_editor_absoluteY="134dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/historico_icon" />
+
+    <TextView
+        android:id="@+id/tv_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/diaSelecionado"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_carro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_carro"
+        app:layout_constraintTop_toBottomOf="@+id/tv_carro" />
+
+    <TextView
+        android:id="@+id/tv_resultDiaH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dia"
+        app:layout_constraintStart_toEndOf="@+id/tv_dia"
+        app:layout_constraintTop_toTopOf="@+id/tv_dia" />
+
+    <TextView
+        android:id="@+id/tv_entidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/entidadeH"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dia"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_dia"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dia" />
+
+    <TextView
+        android:id="@+id/tv_resultEntidadeH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_entidade"
+        app:layout_constraintStart_toEndOf="@+id/tv_entidade"
+        app:layout_constraintTop_toTopOf="@+id/tv_entidade" />
+
+    <TextView
+        android:id="@+id/tv_unidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/unidadeH"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_entidade"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_entidade"
+        app:layout_constraintTop_toBottomOf="@+id/tv_entidade" />
+
+    <TextView
+        android:id="@+id/tv_resultUnidadeH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_unidade"
+        app:layout_constraintStart_toEndOf="@+id/tv_unidade"
+        app:layout_constraintTop_toTopOf="@+id/tv_unidade" />
+
+    <TextView
+        android:id="@+id/tv_centro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/centroH"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_unidade"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_unidade"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unidade" />
+
+    <TextView
+        android:id="@+id/tv_resultCentroH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_centro"
+        app:layout_constraintStart_toEndOf="@+id/tv_centro"
+        app:layout_constraintTop_toTopOf="@+id/tv_centro" />
+
+    <TextView
+        android:id="@+id/tv_passageiro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/passageiroH"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_centro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_centro"
+        app:layout_constraintTop_toBottomOf="@+id/tv_centro" />
+
+    <TextView
+        android:id="@+id/tv_resultPassageiroH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_passageiro"
+        app:layout_constraintStart_toEndOf="@+id/tv_passageiro"
+        app:layout_constraintTop_toTopOf="@+id/tv_passageiro" />
+
+    <TextView
+        android:id="@+id/tv_localidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/localidadeH"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_passageiro"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_passageiro"
+        app:layout_constraintTop_toBottomOf="@+id/tv_passageiro" />
+
+    <TextView
+        android:id="@+id/tv_resultLocalidadeH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_localidade"
+        app:layout_constraintStart_toEndOf="@+id/tv_localidade"
+        app:layout_constraintTop_toTopOf="@+id/tv_localidade" />
+
+    <TextView
+        android:id="@+id/tv_servico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/servicoH"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_localidade"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_localidade"
+        app:layout_constraintTop_toBottomOf="@+id/tv_localidade" />
+
+    <TextView
+        android:id="@+id/tv_resultServicoH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_servico"
+        app:layout_constraintStart_toEndOf="@+id/tv_servico"
+        app:layout_constraintTop_toTopOf="@+id/tv_servico" />
+
+    <TextView
+        android:id="@+id/tv_horario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/horarioH"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_servico"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_servico"
+        app:layout_constraintTop_toBottomOf="@+id/tv_servico" />
+
+    <TextView
+        android:id="@+id/tv_resultHorarioH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_horario"
+        app:layout_constraintStart_toEndOf="@+id/tv_horario"
+        app:layout_constraintTop_toTopOf="@+id/tv_horario" />
+
+    <TextView
+        android:id="@+id/tv_dataPrevista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/DprevistaH"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_horario"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_horario"
+        app:layout_constraintTop_toBottomOf="@+id/tv_horario" />
+
+    <TextView
+        android:id="@+id/tv_resultPrevistaH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dataPrevista"
+        app:layout_constraintStart_toEndOf="@+id/tv_dataPrevista"
+        app:layout_constraintTop_toTopOf="@+id/tv_dataPrevista" />
+
+    <TextView
+        android:id="@+id/tv_dataEmissao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/DemissaoH"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/tv_dataPrevista"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_dataPrevista"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dataPrevista" />
+
+    <TextView
+        android:id="@+id/tv_resultEmissaoH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dataEmissao"
+        app:layout_constraintStart_toEndOf="@+id/tv_dataEmissao"
+        app:layout_constraintTop_toTopOf="@+id/tv_dataEmissao" />
+
+    <TextView
+        android:id="@+id/tv_observacoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/obresevacoesH"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/conteinerHistorico"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/conteinerHistorico"
+        app:layout_constraintTop_toBottomOf="@+id/tv_dataEmissao" />
+
+    <TextView
+        android:id="@+id/tv_resultObservacoesH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/tv_observacoes"
+        app:layout_constraintStart_toStartOf="@+id/tv_observacoes"
+        app:layout_constraintTop_toBottomOf="@+id/tv_observacoes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

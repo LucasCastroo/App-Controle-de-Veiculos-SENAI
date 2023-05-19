@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    tools:context=".TelaRUV">
+
+    <ImageView
+        android:id="@+id/checklist_ruv"
+        android:layout_marginTop="70dp"
+        android:layout_width="184dp"
+        android:layout_height="78dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/checklist_ruv" />
+
+    <TextView
+        android:id="@+id/escolher_carro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="187dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:text="@string/ruv"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ed_entidade"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:hint="@string/entidade"
+        app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
+        app:layout_constraintStart_toStartOf="@id/conteinerComponents"
+        app:layout_constraintTop_toTopOf="@id/conteinerComponents" />
+
+    <EditText
+        android:id="@+id/ed_unidade"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/unidade"
+        app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
+        app:layout_constraintStart_toStartOf="@id/conteinerComponents"
+        app:layout_constraintTop_toTopOf="@id/conteinerComponents" />
+
+    <EditText
+        android:id="@+id/ed_centro"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/centro"
+        app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
+        app:layout_constraintStart_toStartOf="@id/conteinerComponents"
+        app:layout_constraintTop_toTopOf="@id/conteinerComponents" />
+
+    <EditText
+        android:id="@+id/ed_nome_passageiro"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/nome_passageiro"
+        app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
+        app:layout_constraintStart_toStartOf="@id/conteinerComponents"
+        app:layout_constraintTop_toTopOf="@id/conteinerComponents" />
+
+    <EditText
+        android:id="@+id/ed_localidade"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/localidade"
+        app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
+        app:layout_constraintStart_toStartOf="@id/conteinerComponents"
+        app:layout_constraintTop_toTopOf="@id/conteinerComponents" />
+
+    <EditText
+        android:id="@+id/ed_servico"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/servico_executar"
+        app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
+        app:layout_constraintStart_toStartOf="@id/conteinerComponents"
+        app:layout_constraintTop_toTopOf="@id/conteinerComponents" />
+
+    <EditText
+        android:id="@+id/ed_horario"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/horario"
+        app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
+        app:layout_constraintStart_toStartOf="@id/conteinerComponents"
+        app:layout_constraintTop_toTopOf="@id/conteinerComponents" />
+
+    <EditText
+        android:id="@+id/ed_data_prev"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/data_prevista"
+        app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
+        app:layout_constraintStart_toStartOf="@id/conteinerComponents"
+        app:layout_constraintTop_toTopOf="@id/conteinerComponents" />
+
+    <EditText
+        android:id="@+id/ed_data_emissao"
+        style="@style/Edit_Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/data_emissao"
+        app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
+        app:layout_constraintStart_toStartOf="@id/conteinerComponents"
+        app:layout_constraintTop_toTopOf="@id/conteinerComponents" />
+
+    <EditText
+        android:id="@+id/ed_observacao"
+        style="@style/campo_observacoes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/observacao"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@id/conteinerComponents"
+        app:layout_constraintStart_toStartOf="@id/conteinerComponents"
+        app:layout_constraintTop_toTopOf="@id/conteinerComponents" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_avancar"
+        style="@style/botao_prosseguir"
+        android:layout_width="180dp"
+        android:layout_marginLeft="113dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="60sp"
+        android:text="@string/avançar"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_gravity="center"
+        android:layout_marginVertical="60dp"/>
+
+</LinearLayout>
+</ScrollView>
